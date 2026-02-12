@@ -1,0 +1,30 @@
+{
+  "name": "livekit-interactive-show",
+  "version": "1.0.0",
+  "description": "MVP for live interactive show platform with LiveKit",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=@livekit-show/server",
+    "dev:demo": "npm run dev --workspace=@livekit-show/demo",
+    "dev:dashboard": "npm run dev --workspace=@livekit-show/dashboard",
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build --workspace=@livekit-show/shared",
+    "build:server": "npm run build --workspace=@livekit-show/server",
+    "build:demo": "npm run build --workspace=@livekit-show/demo",
+    "build:dashboard": "npm run build --workspace=@livekit-show/dashboard",
+    "start:server": "npm run start --workspace=@livekit-show/server"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "livekit",
+    "streaming",
+    "live-show",
+    "webrtc"
+  ]
+}
